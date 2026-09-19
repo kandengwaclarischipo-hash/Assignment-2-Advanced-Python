@@ -1,0 +1,10 @@
+2. SQLite Database Connections in Python Key Connection Steps: 
+
+sqlite3.connect(database_name)
+Establishes a connection pipeline between Python and the SQLite database file on disk (or creates an in-memory database using ":memory:")
+
+cursor = connection.cursor()
+Acts as a pointer or active worker for executing SQL commands and fetching query results.
+
+connection.commit()
+Saves and persists all structural and data modifications (INSERT, UPDATE, DELETE, CREATE TABLE) made during the transaction to the database file.

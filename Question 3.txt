@@ -1,0 +1,6 @@
+List Comprehensions in Python - A list comprehension provides a concise, readable syntax for creating new lists based on existing iterables (lists, ranges, tuples) without writing multi-line for loops or append() calls.
+
+Python syntax
+
+[expression for item in iterable if condition]
+

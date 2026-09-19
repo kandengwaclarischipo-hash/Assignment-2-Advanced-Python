@@ -1,0 +1,36 @@
+Purpose: 
+GET retrieves data without altering server state; POST submits data to create or modify server resources.
+
+Data Transport: 
+GET appends data directly to the URL via query string parameters; POST encapsulates data securely within the HTTP request body.
+
+Capacity: 
+GET is restricted by maximum URL length limits (~2,048 characters); POST has virtually unlimited payload capacity.
+
+Idempotency & Safety:
+GET is idempotent (safe to repeat without side effects); POST is non-idempotent (repeated requests can duplicate actions or records).
+
+Caching & Visibility: 
+GET responses are cached and stored in browser history; POST requests are not cached and hide data from address bars and server logs.
+
+
+Example
+
+import requests
+
+url = "url/post"
+
+# Data payload to send in the request body
+payload = {
+    "title": "Claris Chipo Kandengwa",
+    "body": "My post API.",
+    "userId": 1,
+}
+
+# Sending a POST request with JSON payload
+response = requests.post(url, json=payload)
+
+# Verify the request was successful (HTTP 201 Created)
+print(f"Status Code: {response.status_code}")
+print("Response JSON:")
+print(response.json())
